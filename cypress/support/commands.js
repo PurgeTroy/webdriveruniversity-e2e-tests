@@ -27,6 +27,14 @@ Cypress.Commands.add('selectProduct', (productName) => {
     });
 });
 
+Cypress.Commands.add('navigateTo_webdriverUni_homepage', (productName) => {
+    cy.visit('/');
+});
+
+Cypress.Commands.add('navigateTo_webdriverUni_Checkbox_page', (productName) => {
+    cy.visit('/' + '/Dropdown-Checkboxes-RadioButtons/index.html');
+});
+
 Cypress.Commands.add('contact_submission', (first_name, last_name, email, comment, $selector, textToLocate) => {
     cy.get('[name="first_name"]').type(first_name);
     cy.get('[name="last_name"]').type(last_name);

@@ -7,10 +7,12 @@ describe('contact us test', () => {
         });
     })
 
-    it('successful contact test', () => {
-        // cy.visit("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
-        cy.visit("/");
+    beforeEach(() => {
+        cy.visit(Cypress.env("webdriveruni_homepage"));
         cy.get('#contact-us').invoke('removeAttr', 'target').click({ force: true });
+    })
+
+    it('successful contact test', () => {
         cy.document().should('have.property', 'charset').and('eq', 'UTF-8');
         cy.title().should('include', 'WebDriver | Contact Us');
         cy.url().should('include', 'contactus');
@@ -18,9 +20,6 @@ describe('contact us test', () => {
     });
 
     it('error contact test', () => {
-        // cy.visit("https://www.webdriveruniversity.com/Contact-Us/contactus.html");
-        cy.visit("/");
-        cy.get('#contact-us').invoke('removeAttr', 'target').click({ force: true });
         cy.contact_submission(data.first_name, data.last_name, " ", 'Comment', 'body', 'Error: Invalid email address')
     });
 });
