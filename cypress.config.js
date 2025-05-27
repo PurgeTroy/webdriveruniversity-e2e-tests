@@ -10,6 +10,8 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
+    screenshotOnRunFailure: true,
+    trashAssetsBeforeRuns: true,
     env: {
       first_name: "Sarah",
       webdriveruni_homepage: "https://www.webdriveruniversity.com"
