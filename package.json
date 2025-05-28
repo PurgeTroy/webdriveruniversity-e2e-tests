@@ -7,7 +7,8 @@
     "triggerAllTests-headless": "npx cypress run",
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chhrome",
-    "triggerAllTests-webdriverUni": "npx cypress run --spec cypress/e2e/webdriver_site"
+    "triggerAllTests-webdriverUni": "npx cypress run --spec cypress/e2e/webdriver_site",
+    "dashboard": "npx cypress run --record --key 5e492638-e000-4a43-afe3-02057c9fd841"
   },
   "author": "",
   "license": "ISC",
