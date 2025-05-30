@@ -8,7 +8,8 @@
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chhrome",
     "triggerAllTests-webdriverUni": "npx cypress run --spec cypress/e2e/webdriver_site",
-    "dashboard": "npx cypress run --spec cypress/e2e/webdriver_site --record --key 5e492638-e000-4a43-afe3-02057c9fd841"
+    "dashboard": "npx cypress run --spec cypress/e2e/webdriver_site --record --key 5e492638-e000-4a43-afe3-02057c9fd841",
+    "cross-browser-tests": "npm run triggerAllTests-webdriverUni -- --browser electron --headed& npm run triggerAllTests-webdriverUni -- --browser chrome --headed"
   },
   "author": "",
   "license": "ISC",
