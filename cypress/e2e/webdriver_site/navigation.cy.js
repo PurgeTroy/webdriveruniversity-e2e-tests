@@ -22,7 +22,7 @@ describe("Validate webdriver uni homepage links", () => {
         cy.url().should('include', 'To-Do-List');
 
         cy.go('back');
-        cy.url().should("include", 'contactus');
+        cy.url().should("include", 'webdriver');
     });
 
 });
